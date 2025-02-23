@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kayf-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kayf-web
+  template:
+    metadata:
+      labels:
+        app: kayf-web
+    spec:
+      containers:
+        - name: kayf-web
+          image: kayf-web:v1
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kayf-web-service
+spec:
+  selector:
+    app: kayf-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
