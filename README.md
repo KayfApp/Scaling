@@ -8,7 +8,7 @@ Dieses Repository enthält alle relevanten Komponenten zur **Skalierung der Anwe
 |-------------------|------------------------------------------------------------------------------|
 | `cluster_setup/`  | Setups und Hilfstools zum Starten eines lokalen Clusters (z. B. Minikube)    |
 | `deployments/`    | Helm-Charts und Kubernetes-Deployment-Konfigurationen                        |
-| `Autoscaler/`     | Eigener Python-basierter Autoscaler zur dynamischen Skalierung               |
+| `Autoscaler/`     | Die Yaml Konfig des Autoscalers                                              |
 
 ---
 
